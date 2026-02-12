@@ -11,11 +11,11 @@ export default defineConfig(({ mode }) => {
       host: '0.0.0.0',
     },
 
-    preview: {
-      host: true,
-      port: 3000,
-      allowedHosts: 'all' // ← これ追加（超重要）
-    },
+preview: {
+  host: true,
+  port: Number(process.env.PORT) || 3000,
+  allowedHosts: true
+},
 
     plugins: [react()],
 
